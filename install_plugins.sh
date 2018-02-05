@@ -1,4 +1,4 @@
-version=2.2s
+version=2.3
 
 #----------------------------------------------------------------------------------------------------------
 #
@@ -25,17 +25,21 @@ install_plugin () {
 		echo "==> Plugin $plugin_name is re-installed."
 		rm -rf $plugin_name
 	fi
-#	git clone $plugin $plugin_name
-	git submodule add $plugin $plugin_name
 
+	if [ $3 ]
+		then
+		echo "==> GIT checking out $3"
+		git clone $plugin $plugin_name -b $3
+#		git submodule add $plugin $plugin_name
+	else
+		git clone $plugin $plugin_name
+#		git submodule add $plugin $plugin_name
+	fi
+
+#	Removing .git directory for each plugin thereby creating one big repo
 	if [ -d $plugin_name ]
 		then
 		cd $plugin_name
-		if [ $3 ]
-			then
-			echo "==> GIT checking out $3"
-			git checkout $3
-		fi
 		rm -rf .git
 		cd ..
 	fi
@@ -141,7 +145,7 @@ echo " "
 echo "--> " $(pwd)
 echo "-----------------------------------------------------------------"
 install_plugin git@github.com:ULCC-QMUL/moodle-course_format_qmultopics.git qmultopics develop_32
-install_plugin git@github.com:ULCC-QMUL/moodle-format_landingpage.git landingpage master
+install_plugin git@github.com:ULCC-QMUL/moodle-format_landingpage.git landingpage
 install_plugin https://github.com/gjb2048/moodle-format_topcoll.git topcoll master
 
 #------------------------------------------------------------------------------------------
@@ -219,7 +223,8 @@ echo " "
 echo "--> " $(pwd)
 echo "-----------------------------------------------------------------"
 install_plugin git@github.com:ULCC-QMUL/moodle-local_landingpages.git landingpages
-install_plugin git@github.com:ULCC-QMUL/moodle-local_qmframework.git qmframework
+#install_plugin git@github.com:ULCC-QMUL/moodle-local_qmframework.git qmframework
+install_plugin git@github.com:QMUL/moodle-local_qmframework.git qmframework
 install_plugin git@github.com:ULCC-QMUL/moodle-local_qmcw_coversheet.git qmcw_coversheet
 install_plugin git@github.com:ULCC-QMUL/moodle-local_qmul_sync.git qmul_sync
 install_plugin git@github.com:QMUL/moodle-local_kaltura.git kaltura
