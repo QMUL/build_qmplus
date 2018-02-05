@@ -1,4 +1,4 @@
-version=2.3
+version=2.3.1
 
 #----------------------------------------------------------------------------------------------------------
 #
@@ -412,7 +412,8 @@ echo "--> " $(pwd)
 echo "-----------------------------------------------------------------"
 install_plugin git@github.com:ULCC-QMUL/moodle-report_qmplus.git qmplus
 install_plugin git@github.com:pauln/moodle-report_componentgrades.git componentgrades
-install_plugin git@github.com:ctchanandy/moodle-report_forumgraph.git forumgraph
+#install_plugin git@github.com:ctchanandy/moodle-report_forumgraph.git forumgraph
+install_plugin git@github.com:QMUL/moodle-report_forumgraph.git forumgraph
 #install_plugin git@github.com:mudrd8mz/moodle-report_overviewstats.git overviewstats
 install_plugin git@github.com:QMUL/moodle-report_overviewstatistics.git overviewstats
 
