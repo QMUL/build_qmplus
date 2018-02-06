@@ -65,7 +65,9 @@ echo "--> " $(pwd)
 echo "-----------------------------------------------------------------"
 install_plugin git@github.com:ULCC-QMUL/moodle-course_format_qmultopics.git qmultopics develop_32
 install_plugin git@github.com:ULCC-QMUL/moodle-format_landingpage.git landingpage
-install_plugin https://github.com/gjb2048/moodle-format_topcoll.git topcoll master
+#install_plugin git@github.com:gjb2048/moodle-format_topcoll.git topcoll master
+install_plugin git@github.com:QMUL/moodle-format_topcoll.git topcoll
+
 cd $baseurl
 
 cd blocks
