@@ -65,7 +65,8 @@ echo "--> " $(pwd)
 echo "-----------------------------------------------------------------"
 install_plugin git@github.com:ULCC-QMUL/moodle-course_format_qmultopics.git qmultopics develop_32
 install_plugin git@github.com:ULCC-QMUL/moodle-format_landingpage.git landingpage
-install_plugin https://github.com/gjb2048/moodle-format_topcoll.git topcoll master
+#install_plugin git@github.com:gjb2048/moodle-format_topcoll.git topcoll master
+install_plugin git@github.com:QMUL/moodle-format_topcoll.git topcoll
 cd $baseurl
 
 cd blocks
@@ -73,6 +74,7 @@ echo " "
 echo "--> " $(pwd)
 echo "-----------------------------------------------------------------"
 install_plugin git@github.com:ULCC-QMUL/moodle-block_landingpage.git landingpage
+install_plugin git@github.com:ULCC-QMUL/moodle-block_widgets.git widgets develop_32
 cd $baseurl
 
 cd local
@@ -81,7 +83,11 @@ echo "--> " $(pwd)
 echo "-----------------------------------------------------------------"
 install_plugin git@github.com:ULCC-QMUL/moodle-local_landingpages.git landingpages master
 install_plugin git@github.com:QMUL/moodle-local_qmframework.git qmframework
+install_plugin git@github.com:ULCC-QMUL/moodle-local_widgets.git widgets develop_32
+install_plugin git@github.com:ULCC-QMUL/moodle-local_activitytodo.git activitytodo develop_32
 cd $baseurl
+
+
 echo " "
 echo "====> DONE after $((`date +%s` - start_time)) seconds!"
 echo " "
