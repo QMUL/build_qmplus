@@ -435,7 +435,7 @@ echo " "
 echo "--> " $(pwd)
 echo "-----------------------------------------------------------------"
 #install_plugin git@github.com:apnet/moodle-theme_bcu.git bcu
-install_plugin git@github.com:QMUL/moodle-theme_bloom.git bloom
+#install_plugin git@github.com:QMUL/moodle-theme_bloom.git bloom
 install_plugin git@github.com:gjb2048/moodle-theme_essential.git essential
 install_plugin git@github.com:ULCC-QMUL/moodle-theme_synergy_bootstrap.git synergy_bootstrap
 install_plugin git@github.com:ULCC-QMUL/moodle-theme_qmul.git qmul develop_32
