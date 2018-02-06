@@ -26,8 +26,8 @@ if [ -d $moodle_path ]
 	cd $moodle_path
 else
 	echo "==> cloning Moodle from GitHub into $moodle_path"
-#	git clone git@github.com:moodle/moodle.git $moodle_path
-	git clone git@github.com:QMUL/QMplus34.git $moodle_path
+	git clone git@github.com:moodle/moodle.git $moodle_path
+#	git clone git@github.com:QMUL/qmplus.git $moodle_path
 
 	if [ ! -d $moodle_path ]
 		then
