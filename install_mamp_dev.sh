@@ -59,6 +59,7 @@ echo "--> " $(pwd)
 echo "-----------------------------------------------------------------"
 install_plugin git@github.com:ULCC-QMUL/moodle-local_qmul_messaging.git qmul_messaging master
 install_plugin git@github.com:ULCC-QMUL/moodle-local_qmul_dashboard.git qmul_dashboard master
+install_plugin git@github.com:ULCC-QMUL/moodle-local_qmcw_coversheet.git qmcw_coversheet master
 cd $baseurl
 
 cd plagiarism
@@ -84,6 +85,14 @@ echo "-----------------------------------------------------------------"
 install_plugin git@github.com:turnitin/moodle-mod_turnitintool.git turnitintool
 install_plugin git@github.com:turnitin/moodle-mod_turnitintooltwo.git turnitintooltwo
 cd $baseurl
+
+cd mod/assign/submission
+echo " "
+echo "--> " $(pwd)
+echo "-----------------------------------------------------------------"
+install_plugin git@github.com:ULCC-QMUL/moodle-mod-assign-submission_qmcw_coversheet.git qmcw_coversheet
+cd $baseurl
+
 
 echo " "
 echo "====> DONE after $((`date +%s` - start_time)) seconds!"
