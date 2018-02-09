@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 # script to (re-)install all scripts/commands for multihost
 
+version=3.0
+default_branch=MOODLE_34_STABLE
 
 if [ ! $1 ]
 	then 
@@ -8,9 +10,14 @@ if [ ! $1 ]
 	exit 1
 fi
 
+if [ $2 ]
+	then
+	branch=$2
+else
+	branch=$default_branch
+fi
 #--------------------------------------------------------------------------------------------------
 #--------------------------------------------------------------------------------------------------
-version=2.3
 echo " "
 echo "install all qmplus plugins into $moodle_path/$moodle_name (v.$version)"
 echo "---------------------------------------------------------------------------------------------------"
@@ -22,7 +29,7 @@ echo "==> will install at: $moodle_path"
 
 if [ -d $moodle_path ]
 	then
-	echo "HINT: A Moodle installation '$moodle_path' already exists - skipping!"
+	echo "HINT: A (Moodle?) installation '$moodle_path' already exists - skipping cloning the Moodle base!"
 	cd $moodle_path
 else
 	echo "==> cloning Moodle from GitHub into $moodle_path"
@@ -35,7 +42,7 @@ else
 		exit 1
 	fi
 	cd $moodle_path
-	git checkout MOODLE_34_STABLE
+	git checkout $branch
 fi
 
 baseurl=$(pwd)
