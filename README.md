@@ -37,13 +37,14 @@ To install a plugin using this function the syntax is as follows:
 
 To checkout another branch other than the default one you may use the optional third parameter.
 
-Switching from plain repository to submodules
----------------------------------------------
+Switching from one plain repository to submodules
+-------------------------------------------------
 By default the installation process will install all plugins as part of one large repository.
-You can switch this to an installation using plugins with these steps:
+You can switch this to an installation using plugins by changing into the newlu created QMplus directory and run:
 
-	- cd into the cloned QMplus directory and 'git checkout qmplus-34-dev-submodules'
-	- run 'git submodule update --init --recursive' (this will take some time)
+	./install_plugins.sh -fs
+
+Please note that updateing the submodules may take some time.
 
 ----
-v.1.2.2
+v.1.2.3
