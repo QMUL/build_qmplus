@@ -6,7 +6,7 @@ What is does
 build_qmplus.sh
 ---------------
 
- usage: ./build_qmplus.sh <path/to/qmplus> [<moodle_branch>]
+	usage: ./build_qmplus.sh <path/to/qmplus> [<moodle_branch>]
 
 If not already present it will GIT clone Moodle from GitHub into the given path.
 
@@ -19,11 +19,12 @@ install_plugins.sh
 ------------------
 PLEASE NOTE: this script is copied to the root of the Moodle installation by the 'build_qmplus.sh' script (see above) and needs to run from there!
 
- usage: ./install_plugins [-f] [-s]  
+	usage: ./install_plugins [-f] [-s]  
 
 You may run this script to re-install all plugins according to the setup of the script.
 
 The options are as follows:
+
 	-f this will force all plugins to be re-installed to the repository and branch given in the script, otherwise only missing plugins will be installed.
 	-s this will cause all plugins to be installed as submodules instead as part of one common repository
 
@@ -45,4 +46,4 @@ You can switch this to an installation using plugins with these steps:
 	- run 'git submodule update --init --recursive' (this will take some time)
 
 ----
-v.1.2.1
+v.1.2.2
