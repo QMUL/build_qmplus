@@ -1,4 +1,4 @@
-version=3.2
+version=3.3
 
 #----------------------------------------------------------------------------------------------------------
 #
@@ -34,24 +34,24 @@ install_plugin () {
 		then
 		if [ $3 ] #there is a specific branch/tag given
 			then
-			if [ $submodules ] # if the submodule switch is present install plugin as submodule
+			if [ $single_repo ] # if the submodule switch is present install plugin as submodule
 				then
-				echo "==> add submodule $plugin as $plugin_name with branch $3"
-				[ $testing ] || git submodule add --force -b $3 $plugin $plugin_name
-			else
 				echo "==> clone repository $plugin as $plugin_name with branch $3"
 				[ $testing ] || git clone $plugin $plugin_name -b $3
 				[ $testing ] || rm -rf $plugin_name/.git # removing plugins GIT heritage to make it part of the qmplus repository
+			else
+				echo "==> add submodule $plugin as $plugin_name with branch $3"
+				[ $testing ] || git submodule add --force -b $3 $plugin $plugin_name
 			fi
 		else
-			if [ $submodules ]
+			if [ $single_repo ]
 				then
-				echo "==> add submodule $plugin as $plugin_name"
-				[ $testing ] || git submodule add --force $plugin $plugin_name
-			else
 				echo "==> clone repository $plugin as $plugin_name"
 				[ $testing ] || git clone $plugin $plugin_name
 				[ $testing ] || rm -rf $plugin_name/.git #
+			else
+				echo "==> add submodule $plugin as $plugin_name"
+				[ $testing ] || git submodule add --force $plugin $plugin_name
 			fi
 
 		fi
@@ -79,7 +79,7 @@ while getopts :fst x; do
             force_reinstall=1
             ;;
         s)
-            submodules=1
+            single_repo=1
             ;;
         t)
             testing=1

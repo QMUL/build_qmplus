@@ -1,5 +1,10 @@
 These two scripts allow to (re-)build a QMplus Moodle application from scratch.
 
+New
+-----
+2018-02-15: Now building QMplus with plugins as submodules as default option.
+
+
 What is does
 ---------------
 
@@ -26,7 +31,7 @@ You may run this script to re-install all plugins according to the setup of the 
 The options are as follows:
 
 	-f this will force all plugins to be re-installed to the repository and branch given in the script, otherwise only missing plugins will be installed.
-	-s this will cause all plugins to be installed as submodules instead as part of one common repository
+	-s this will cause all plugins to be installed into one single repository instead as submodules
 
 Script syntax
 -------------
@@ -47,4 +52,4 @@ You can switch this to an installation using plugins by changing into the newlu 
 Please note that updateing the submodules may take some time.
 
 ----
-v.1.2.3
+v.1.3
