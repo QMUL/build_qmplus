@@ -1,4 +1,4 @@
-version=18041900
+version=18100500
 
 #----------------------------------------------------------------------------------------------------------
 #
@@ -103,7 +103,7 @@ install_plugin git@github.com:ndunand/moodle-tool_mergeusers.git mergeusers
 chdir auth/
 install_plugin git@github.com:ULCC-QMUL/moodle-auth_dbsyncother.git dbsyncother
 install_plugin git@github.com:catalyst/moodle-auth_saml2.git saml2
-install_plugin git@github.com:Microsoft/moodle-auth_oidc.git oidc
+install_plugin git@github.com:Microsoft/moodle-auth_oidc.git oidc MOODLE_35_STABLE
 install_plugin git@github.com:QMUL/moodle-auth_cas_db.git cas_db
 install_plugin git@github.com:QMUL/moodle-auth_ulcc_sharedsecret_sso.git ulcc_sharedsecret_sso
 
@@ -132,31 +132,33 @@ install_plugin git@github.com:deraadt/Moodle-block_progress.git progress
 install_plugin git@github.com:ULCC-QMUL/moodle-block_qmul_my_qmplus.git qmul_my_qmplus
 install_plugin git@github.com:ULCC-QMUL/moodle-block_qmul_myprofile.git qmul_myprofile July2017
 #install_plugin git@github.com:roglos/moodle-block_quickmail.git quickmail
-install_plugin git@github.com:QMUL/moodle-block_quickmail.git quickmail
+#install_plugin git@github.com:QMUL/moodle-block_quickmail.git quickmail
+install_plugin git@github.com:ULCC-QMUL/moodle-block_quickmail.git quickmail develop_34
 #install_plugin git@github.com:VERSION2-Inc/moodle-block_sharing_cart.git sharing_cart
 install_plugin git@github.com:QMUL/moodle-block_sharing_cart.git sharing_cart
 install_plugin git@github.com:QMUL/moodle-block_side_bar.git side_bar
 #install_plugin git@github.com:jfilip/moodle-block_side_bar.git side_bar
 install_plugin git@github.com:ULCC-QMUL/moodle-block_turningtech.git turningtech
 install_plugin git@github.com:QMUL/moodle-block_ulcc_diagnostics.git ulcc_diagnostics
-install_plugin git@github.com:ULCC-QMUL/moodle-block_widgets.git widgets develop_34
+install_plugin git@github.com:ULCC-QMUL/moodle-block_widgets.git widgets develop_34_1
 install_plugin git@github.com:moodlehq/moodle-block_messages.git messages
 install_plugin git@github.com:QMUL/moodle-block_accessibility.git accessibility
 install_plugin git@github.com:moodlehq/moodle-block_course_overview.git course_overview
 install_plugin git@github.com:QMUL/moodle-block_course_reports.git course_reports
 install_plugin git@github.com:deraadt/moodle-block_heatmap.git heatmap
 install_plugin git@github.com:QMUL/moodle-block_ilp.git ilp
-install_plugin git@github.com:Microsoft/moodle-block_microsoft.git microsoft
-install_plugin git@github.com:Microsoft/moodle-block_onenote.git onenote
+install_plugin git@github.com:Microsoft/moodle-block_microsoft.git microsoft MOODLE_35_STABLE
+install_plugin git@github.com:Microsoft/moodle-block_onenote.git onenote 
 install_plugin git@github.com:lucisgit/moodle-block_quickscan.git quickscan
 install_plugin git@github.com:QMUL/moodle-block_reportsdash.git reportsdash
 install_plugin git@github.com:turnitin/moodle-block_turnitin.git turnitin
 install_plugin git@github.com:QMUL/moodle-block_checklist.git checklist
 install_plugin git@github.com:QMUL/moodle-block_course_contents.git course_contents
+install_plugin git@github.com:deraadt/moodle-block_completion_progress.git completion_progress
 
 #------------------------------------------------------------------------------------------
 chdir course/format/
-install_plugin git@github.com:ULCC-QMUL/moodle-course_format_qmultopics.git qmultopics develop_34
+install_plugin git@github.com:ULCC-QMUL/moodle-course_format_qmultopics.git qmultopics live
 install_plugin git@github.com:ULCC-QMUL/moodle-format_landingpage.git landingpage
 #install_plugin git@github.com:gjb2048/moodle-format_topcoll.git topcoll master
 #install_plugin git@github.com:QMUL/moodle-format_topcoll.git topcoll
@@ -164,10 +166,10 @@ install_plugin git@github.com:gjb2048/moodle-format_topcoll.git topcoll
 install_plugin git@github.com:marinaglancy/moodle-format_flexsections.git flexsections
 #install_plugin git@github.com:ULCC-QMUL/moodle-format_grid.git grid develop_34
 install_plugin git@github.com:QMUL/moodle-format_grid.git grid
-install_plugin git@github.com:ULCC-QMUL/moodle-format_qmulgrid.git qmulgrid develop_34
+install_plugin git@github.com:ULCC-QMUL/moodle-format_qmulgrid.git qmulgrid live
 #install_plugin git@github.com:ULCC-QMUL/moodle-course_format_qmultc.git qmultc develop_34
-install_plugin git@github.com:ULCC-QMUL/moodle-course_format_qmultc.git qmultc develop_34
-install_plugin git@github.com:ULCC-QMUL/moodle-course_format_qmulweeks.git qmulweeks develop_34
+install_plugin git@github.com:ULCC-QMUL/moodle-course_format_qmultc.git qmultc live
+install_plugin git@github.com:ULCC-QMUL/moodle-course_format_qmulweeks.git qmulweeks live
 
 #------------------------------------------------------------------------------------------
 chdir enrol/
@@ -182,8 +184,9 @@ install_plugin git@github.com:ULCC-QMUL/moodle-filter_easychem.git easychem
 install_plugin git@github.com:QMUL/moode-filer_oembed.git oembed
 install_plugin git@github.com:geoffrowland/moodle-filter_jmol.git jmol
 install_plugin git@github.com:ULCC-QMUL/moodle-filter_freemind.git freemind develop_303
-install_plugin git@github.com:QMUL/moodle-filter_kaltura.git kaltura
+#install_plugin git@github.com:QMUL/moodle-filter_kaltura.git kaltura
 install_plugin git@github.com:QMUL/moodle-filter_replace.git replace
+install_plugin git@github.com:gthomas2/moodle-filter_imageopt.git imageopt MOODLE_35_STABLE
 
 #------------------------------------------------------------------------------------------
 chdir grade/export/
@@ -206,30 +209,31 @@ install_plugin git@github.com:ULCC-QMUL/moodle-gradereport_qmul_sits.git qmul_si
 #------------------------------------------------------------------------------------------
 chdir lib/editor/tinymce/plugins
 #install_plugin git@github.com:kaltura/moodle-tinymce_kalturamedia.git kalturamedia
-install_plugin git@github.com:QMUL/moodle-editor_tinymce_kalturamedia.git kalturamedia
+#install_plugin git@github.com:QMUL/moodle-editor_tinymce_kalturamedia.git kalturamedia
 install_plugin git@github.com:ULCC-QMUL/moodle-editor_tinymce_mathslate.git mathslate
 
 #------------------------------------------------------------------------------------------
 chdir local/
 install_plugin git@github.com:ULCC-QMUL/moodle-local_landingpages.git landingpages
 #install_plugin git@github.com:ULCC-QMUL/moodle-local_qmframework.git qmframework
-install_plugin git@github.com:QMUL/moodle-local_qmframework.git qmframework
+#install_plugin git@github.com:QMUL/moodle-local_qmframework.git qmframework
+install_plugin git@github.com:ULCC-QMUL/moodle-local_qmframework.git qmframework client-qmul-3.4-prod
 install_plugin git@github.com:ULCC-QMUL/moodle-local_qmcw_coversheet.git qmcw_coversheet
 install_plugin git@github.com:ULCC-QMUL/moodle-local_qmul_sync.git qmul_sync
-install_plugin git@github.com:QMUL/moodle-local_kaltura.git kaltura
-install_plugin git@github.com:Microsoft/moodle-local_onenote.git onenote
-install_plugin git@github.com:Microsoft/moodle-local_o365.git o365
+#install_plugin git@github.com:QMUL/moodle-local_kaltura.git kaltura
+install_plugin git@github.com:Microsoft/moodle-local_onenote.git onenote MOODLE_36_STABLE
+install_plugin git@github.com:Microsoft/moodle-local_o365.git o365 MOODLE_35_STABLE
 install_plugin git@github.com:ULCC-QMUL/moodle-local_activitytodo.git activitytodo
 install_plugin git@github.com:DBezemer/moodle-local_analytics.git analytics
 install_plugin git@github.com:jleyva/moodle-local_anonymousposting.git anonymousposting
 install_plugin git@github.com:ULCC-QMUL/moodle-local_course_backup.git course_backup
 install_plugin git@github.com:ULCC-QMUL/moodle-local_course_creation_wizard.git course_creation_wizard
-install_plugin git@github.com:ULCC-QMUL/kal_local_kalturamediagallery.git kalturamediagallery
+#install_plugin git@github.com:ULCC-QMUL/kal_local_kalturamediagallery.git kalturamediagallery
 install_plugin git@github.com:ULCC-QMUL/moodle-local_mass_enroll.git mass_enroll
 install_plugin git@github.com:Microsoft/moodle-local_msaccount.git msaccount
 #install_plugin git@github.com:kaltura/moodle-local_mymedia.git mymedia
 install_plugin git@github.com:ULCC-QMUL/kal_local_mymedia.git mymedia
-install_plugin git@github.com:Microsoft/moodle-local_office365.git office365
+install_plugin git@github.com:Microsoft/moodle-local_office365.git office365 MOODLE_35_STABLE
 install_plugin git@github.com:ULCC-QMUL/moodle-local_pearson.git pearson
 install_plugin git@github.com:ULCC-QMUL/moodle-local_physicsapp.git physicsapp
 install_plugin git@github.com:ULCC-QMUL/moodle-local_qm_activities.git qm_activities
@@ -241,6 +245,7 @@ install_plugin git@github.com:ULCC-QMUL/moodle-local_rollover_plugin.git rollove
 install_plugin git@github.com:moodleuulm/moodle-local_sandbox.git sandbox
 install_plugin git@github.com:ULCC-QMUL/moodle-local_widgets.git widgets
 install_plugin git@github.com:QMUL/moodle-local_mobile.git mobile
+install_plugin git@github.com:ULCC-QMUL/moodle-local_orphan2stealth.git orphan2stealth
 
 #------------------------------------------------------------------------------------------
 chdir mod/
@@ -248,14 +253,14 @@ install_plugin git@github.com:danmarsden/moodle-mod_attendance.git attendance
 install_plugin git@github.com:ULCC-QMUL/moodle-mod_turningtech.git turningtech
 install_plugin git@github.com:QMUL/moodle-mod_checklist.git checklist
 install_plugin git@github.com:QMUL/moodle-mod_adaptivequiz.git adaptivequiz
-install_plugin git@github.com:QMUL/moodle-mod_adobeconnect.git adobeconnect
+#install_plugin git@github.com:ULCC-QMUL/moodle-mod_adobeconnect.git adobeconnect
 install_plugin git@github.com:tonyjbutler/moodle-mod_aspirelist.git aspirelist
 install_plugin git@github.com:ULCC-QMUL/talis-mod_aspirelists.git aspirelists helptext_added
 install_plugin git@github.com:markn86/moodle-mod_certificate.git certificate
 install_plugin git@github.com:ndunand/moodle-mod_choicegroup.git choicegroup
 install_plugin git@github.com:moodlerooms/moodle-mod_collaborate.git collaborate
 install_plugin git@github.com:moodleou/moodle-mod_forumng.git forumng
-install_plugin git@github.com:QMUL/moodle-mod_kalvidassign.git kalvidassign
+#install_plugin git@github.com:QMUL/moodle-mod_kalvidassign.git kalvidassign
 install_plugin git@github.com:QMUL/moodle-mod_kalvidpres.git kalvidpres
 install_plugin git@github.com:QMUL/moodle-mod_kalvidres.git kalvidres
 install_plugin git@github.com:tonyjbutler/moodle-mod_nln.git nln
@@ -263,13 +268,14 @@ install_plugin git@github.com:moodleou/moodle-mod_oublog.git oublog
 install_plugin git@github.com:moodleou/moodle-mod_ouwiki.git ouwiki
 install_plugin git@github.com:ULCC-QMUL/moodle-mod_pearson.git pearson
 install_plugin git@github.com:ucsf-ckm/moodle-mod-respondusws.git respondusws
-install_plugin git@github.com:QMUL/moodle_mod_subpage.git subpage
+install_plugin git@github.com:ULCC-QMUL/moodle-mod_subpage.git subpage QMU-develop-34
 install_plugin git@github.com:catalyst/moodle-mod_facetoface.git facetoface
 install_plugin git@github.com:gbateson/moodle-mod_hotpot.git hotpot
 #install_plugin git@github.com:projectestac/moodle-mod_hvp.git hvp
-install_plugin git@github.com:QMUL/moodle-mod_hvp.git hvp
+#install_plugin git@github.com:QMUL/moodle-mod_hvp.git hvp
+install_plugin git@github.com:h5p/h5p-moodle-plugin.git hvp stable
 install_plugin git@github.com:elearningsoftware/moodle-mod_journal.git journal
-install_plugin git@github.com:PoetOS/moodle-mod_questionnaire.git questionnaire MOODLE_34_STABLE
+install_plugin git@github.com:PoetOS/moodle-mod_questionnaire.git questionnaire MOODLE_35_STABLE
 install_plugin git@github.com:learnweb/moodle-mod_ratingallocate.git ratingallocate
 install_plugin git@github.com:bostelm/moodle-mod_scheduler.git scheduler
 install_plugin git@github.com:mudrd8mz/moodle-mod_subcourse.git subcourse
@@ -281,13 +287,13 @@ install_plugin git@github.com:QMUL/moodle-mod_lightboxgallery.git lightboxgaller
 
 #------------------------------------------------------------------------------------------
 chdir mod/assign/feedback
-install_plugin git@github.com:Microsoft/moodle-assignfeedback_onenote.git onenote
+install_plugin git@github.com:Microsoft/moodle-assignfeedback_onenote.git onenote MOODLE_35_STABLE
 
 #------------------------------------------------------------------------------------------
 chdir mod/assign/submission
 install_plugin git@github.com:pauln/moodle-assignsubmission_onlineaudio.git onlineaudio
 install_plugin git@github.com:ULCC-QMUL/moodle-mod-assign-submission_qmcw_coversheet.git qmcw_coversheet
-install_plugin git@github.com:Microsoft/moodle-assignsubmission_onenote.git onenote
+install_plugin git@github.com:Microsoft/moodle-assignsubmission_onenote.git onenote MOODLE_35_STABLE
 install_plugin git@github.com:QMUL/moodle-assignsubmission_mahara.git mahara
 
 #------------------------------------------------------------------------------------------
@@ -323,6 +329,7 @@ install_plugin git@github.com:moodleou/moodle-qtype_varnumericset.git varnumeric
 install_plugin git@github.com:moodleou/moodle-qtype_varnumunit.git varnumunit
 install_plugin git@github.com:QMUL/moodle-qtype_gapfill.git gapfill
 install_plugin git@github.com:QMUL/moodle-qtype_ddmatch.git ddmatch
+install_plugin git@github.com:jmvedrine/moodle-qtype_algebra.git algebra
 
 #------------------------------------------------------------------------------------------
 chdir question/type/
@@ -347,11 +354,13 @@ install_plugin git@github.com:dthies/moodle-atto_fullscreen.git fullscreen
 install_plugin git@github.com:projectestac/moodle-atto_fontfamily.git fontfamily
 install_plugin git@github.com:andrewnicols/moodle-atto_fontsize.git fontsize
 install_plugin git@github.com:ndunand/moodle-atto_morefontcolors.git morefontcolors
-install_plugin git@github.com:ULCC-QMUL/kal_lib_editor_atto_plugins_kalturamedia.git kalturamedia
+#install_plugin git@github.com:ULCC-QMUL/kal_lib_editor_atto_plugins_kalturamedia.git kalturamedia
+install_plugin git@github.com:justinhunt/moodle-atto_snippet.git snippet
 
 #------------------------------------------------------------------------------------------
 chdir plagiarism/
-install_plugin git@github.com:QMUL/moodle-plagiarism_turnitin.git turnitin
+#install_plugin git@github.com:QMUL/moodle-plagiarism_turnitin.git turnitin
+install_plugin git@github.com:turnitin/moodle-plagiarism_turnitin.git turnitin develop
 
 #------------------------------------------------------------------------------------------
 chdir report/
@@ -364,7 +373,7 @@ install_plugin git@github.com:QMUL/moodle-report_overviewstatistics.git overview
 
 #------------------------------------------------------------------------------------------
 chdir repository/
-install_plugin git@github.com:Microsoft/moodle-repository_office365.git office365
+install_plugin git@github.com:Microsoft/moodle-repository_office365.git office365 MOODLE_35_STABLE
 #install_plugin git@github.com:Microsoft/moodle-repository_onenote.git onenote
 install_plugin git@github.com:QMUL/moodle-repository_evernote.git evernote
 

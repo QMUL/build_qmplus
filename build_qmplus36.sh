@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 # script to (re-)install all scripts/commands for multihost
 
-version=100418
-default_branch=MOODLE_34_STABLE
+version=181005
+default_branch=MOODLE_36_STABLE
 
 if [ ! $1 ]
 	then 
@@ -49,12 +49,12 @@ fi
 baseurl=$(pwd)
 echo "==> baseurl = $baseurl"
 echo "==> copying install_plugins.sh script into $absolute_path/$moodle_name and running it"
-cp $home/install_plugins.sh install_plugins.sh
+cp $home/install_plugins36.sh install_plugins36.sh
 
 echo " "
 echo "==> Moodle installed after $((`date +%s` - start_time)) seconds!"
 echo "==> Now installing plugins"
-./install_plugins.sh
+./install_plugins36.sh
 
 
 
