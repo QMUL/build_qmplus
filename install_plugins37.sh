@@ -1,4 +1,4 @@
-version=18100500
+version=190530
 
 #----------------------------------------------------------------------------------------------------------
 #
@@ -383,14 +383,14 @@ chdir theme/
 install_plugin git@github.com:gjb2048/moodle-theme_essential.git essential
 install_plugin git@github.com:ULCC-QMUL/moodle-theme_synergy_bootstrap.git synergy_bootstrap
 #install_plugin git@github.com:ULCC-QMUL/moodle-theme_qmul.git qmul develop_34
-install_plugin git@github.com:ULCC-QMUL/moodle-theme_qmul.git qmul develop_34
-install_plugin git@github.com:ULCC-QMUL/moodle-theme_qmul_humanities.git qmul_humanities develop_34
-install_plugin git@github.com:ULCC-QMUL/moodle-theme_qmul_learning.git qmul_learning develop_34
-install_plugin git@github.com:ULCC-QMUL/moodle-theme_qmul_lifesciences.git qmul_lifesciences develop_34
-install_plugin git@github.com:ULCC-QMUL/moodle-theme_qmul_medicine.git qmul_medicine develop_34
-install_plugin git@github.com:ULCC-QMUL/moodle-theme_qmul_science.git qmul_science develop_34
+install_plugin git@github.com:ULCC-QMUL/moodle-theme_qmul.git qmul develop_36
+install_plugin git@github.com:ULCC-QMUL/moodle-theme_qmul_humanities.git qmul_humanities develop_36
+install_plugin git@github.com:ULCC-QMUL/moodle-theme_qmul_learning.git qmul_learning develop_36
+install_plugin git@github.com:ULCC-QMUL/moodle-theme_qmul_lifesciences.git qmul_lifesciences develop_36
+install_plugin git@github.com:ULCC-QMUL/moodle-theme_qmul_medicine.git qmul_medicine develop_36
+install_plugin git@github.com:ULCC-QMUL/moodle-theme_qmul_science.git qmul_science develop_36
 install_plugin git@github.com:QMUL/moodle-theme_adaptable.git adaptable
-install_plugin git@github.com:QMUL/moodle-theme_klass.git klass
+#install_plugin git@github.com:QMUL/moodle-theme_klass.git klass
 
 #------------------------------------------------------------------------------------------
 chdir user/profile/field/
